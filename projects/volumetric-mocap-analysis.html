@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVH1X106DQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HVH1X106DQ');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="../images/favicon.webp">
+    <meta name="description"
+        content="Blender addon for extracting articulated skeletons from volumetric motion capture for biomechanical analysis. Developed during NSF REU at Georgia State University.">
+    <title>Volumetric Motion Capture Biomechanic Analysis Tool - Cameron Detig</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Project Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero-title">Volumetric Motion Capture Analysis Tool</h1>
+            <p class="page-hero-subtitle">Blender Addon for Biomechanical Skeleton Extraction</p>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section project-detail-section">
+        <div class="container">
+
+            <!-- Project Overview -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Project Overview</h2>
+                <p class="project-detail-text">
+                    This Blender addon enables the extraction of articulated skeletons from volumetric motion capture
+                    data.
+                    Developed as part of an Immersive Media Research Experience for Undergraduates (REU) at Georgia
+                    State University,
+                    the tool is intended for biomedical analysis to identify strenuous movements from recordings of
+                    athletes,
+                    as well as for use in film and animation contexts.
+                </p>
+                <p class="project-detail-text">
+                    The project was mentored by Dr. Zing Yu.
+                </p>
+            </div>
+
+            <!-- Links -->
+            <div class="project-detail-content">
+                <p class="project-detail-text">
+                    <a href="https://github.com/CameronDetig/Volumetric-Motion-Capture-Biomechanic-Analysis-Tool"
+                        target="_blank" rel="noopener noreferrer" class="direct-link">
+                        View on GitHub <span class="link-arrow">→</span>
+                    </a>
+                </p>
+                <p class="project-detail-text">
+                    <a href="https://par.nsf.gov/servlets/purl/10423954" target="_blank" rel="noopener noreferrer"
+                        class="direct-link">
+                        Read the Paper <span class="link-arrow">→</span>
+                    </a>
+                </p>
+            </div>
+
+            <!-- Video Demo -->
+            <div class="project-embed">
+                <div class="demo-links">
+                    <p class="demo-description">
+                        Watch the demonstration video below, or
+                        <a href="https://vimeo.com/579904746" target="_blank" rel="noopener noreferrer"
+                            class="direct-link">
+                            open it on Vimeo <span class="link-arrow">→</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="video-embed">
+                    <iframe src="https://player.vimeo.com/video/579904746?h=0&title=0&byline=0&portrait=0"
+                        frameborder="0" width="100%" height="500" title="Volumetric Motion Capture Analysis Demo"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Technical Implementation</h2>
+
+                <h3 class="project-detail-subheading">Volumetric Motion Capture</h3>
+                <p class="project-detail-text">
+                    Traditional motion capture uses markers placed on a subject's body to track movement. Volumetric
+                    motion capture,
+                    in contrast, uses multiple cameras to capture the full 3D volume of a subject without markers,
+                    producing detailed mesh sequences.
+                    This addon bridges the gap between volumetric capture data and traditional skeleton-based animation
+                    workflows.
+                </p>
+
+                <!-- System Diagram -->
+                <div class="project-detail-content">
+                    <h3 class="project-detail-subheading">System Overview</h2>
+                    <img src="../images/projects/volumetric-mocap/diagram.png" alt="System Diagram" class="diagram-image">
+                </div>
+
+                <h3 class="project-detail-subheading">Skeleton Extraction Process</h3>
+                <p class="project-detail-text">
+                    The tool uses the Iterative Closest Point (ICP) algorithm to align joint markers to the volumetric
+                    mesh data frame by frame.
+                    This allows researchers and animators to extract meaningful skeletal motion data from markerless
+                    capture sessions.
+                </p>
+                <ul class="project-feature-list">
+                    <li><strong>ICP Algorithm</strong> - Utilizes Christopher Gearhart's ICP implementation for precise
+                        point alignment</li>
+                    <li><strong>Frame-by-Frame Processing</strong> - Processes mesh sequences to track joint positions
+                        over time</li>
+                    <li><strong>Blender Integration</strong> - Seamlessly integrates into Blender's 3D workflow</li>
+                </ul>
+
+                <h3 class="project-detail-subheading">Applications</h3>
+                <ul class="project-feature-list">
+                    <li><strong>Biomedical Analysis</strong> - Identify strenuous movements and analyze athlete
+                        performance</li>
+                    <li><strong>Film & Animation</strong> - Extract skeleton data for use in traditional animation
+                        pipelines</li>
+                    <li><strong>Research</strong> - Enable biomechanical studies using volumetric capture data</li>
+                </ul>
+            </div>
+
+            <!-- Technologies Used -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Technologies Used</h2>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Blender</span>
+                    <span class="tech-tag">ICP Algorithm</span>
+                    <span class="tech-tag">3D Graphics</span>
+                    <span class="tech-tag">Motion Capture</span>
+                    <span class="tech-tag">Biomechanics</span>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="project-detail-content">
+                <h2 class="project-detail-heading">Project Links</h2>
+                <p class="project-detail-text">
+                    <a href="https://github.com/CameronDetig/Volumetric-Motion-Capture-Biomechanic-Analysis-Tool"
+                        target="_blank" rel="noopener noreferrer" class="direct-link">
+                        View on GitHub <span class="link-arrow">→</span>
+                    </a>
+                </p>
+                <p class="project-detail-text">
+                    <a href="https://par.nsf.gov/servlets/purl/10423954" target="_blank" rel="noopener noreferrer"
+                        class="direct-link">
+                        Read the Paper <span class="link-arrow">→</span>
+                    </a>
+                </p>
+                <p class="project-detail-text">
+                    <a href="https://vimeo.com/579904746" target="_blank" rel="noopener noreferrer" class="direct-link">
+                        Demo Video <span class="link-arrow">→</span>
+                    </a>
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="project-navigation">
+                <a href="../index.html" class="project-nav-button">← Back to Projects</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Cameron Detig - camerondetig@gmail.com</p>
+            <div class="footer-links">
+                <a href="https://github.com/CameronDetig" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/cameron-detig/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>
